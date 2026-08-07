@@ -741,8 +741,9 @@
         // Checkout Action
         document.getElementById('btn-checkout').addEventListener('click', () => {
             if(cart.items.length === 0) return;
+            const bundleNames = cart.items.map(i => `${i.qty > 1 ? i.qty+'x ' : ''}${i.name}`).join(', ');
             const total = cart.items.reduce((sum, i) => sum + (i.price * i.qty), 0);
-            window.location.href = `pay.html?price=${encodeURIComponent(total)}`;
+            window.location.href = `https://tally.so/r/D4oVGZ?bundle=${encodeURIComponent(bundleNames)}&price=${encodeURIComponent(total)}`;
         });
 
         // --- Data Fetching ---
