@@ -838,17 +838,21 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            /* Disable Glassmorphism blur for performance, but KEEP the background transparency to let the glowing blobs show through */
+            /* Completely Disable Glassmorphism and glowing blobs for phones */
             header, .cart-bar {
                 backdrop-filter: none;
                 -webkit-backdrop-filter: none;
-                background: rgba(26,26,36,0.95);
+                background: var(--card-bg);
             }
             .nav-card, .product-card {
                 backdrop-filter: none;
                 -webkit-backdrop-filter: none;
-                background: rgba(65, 65, 65, 0.11);
+                background: var(--card-bg);
                 border: 1px solid rgba(255, 255, 255, 0.05);
+            }
+            .nav-card::before, .nav-card::after,
+            .product-card::before, .product-card::after {
+                display: none !important;
             }
 
             .grid {
