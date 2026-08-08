@@ -838,75 +838,77 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            /* Disable Glassmorphism for Performance */
+            /* Disable Glassmorphism blur for performance, but KEEP the background transparency to let the glowing blobs show through */
             header, .cart-bar {
                 backdrop-filter: none;
                 -webkit-backdrop-filter: none;
-                background: var(--card-bg);
+                background: rgba(26,26,36,0.95);
             }
             .nav-card, .product-card {
                 backdrop-filter: none;
                 -webkit-backdrop-filter: none;
-                background: var(--card-bg);
+                background: rgba(65, 65, 65, 0.11);
                 border: 1px solid rgba(255, 255, 255, 0.05);
-            }
-            .nav-card::before, .nav-card::after,
-            .product-card::before, .product-card::after {
-                display: none;
             }
 
             .grid {
                 grid-template-columns: 1fr 1fr;
-                gap: 0.5rem;
+                gap: 10px;
             }
             .nav-card {
-                padding: 0.75rem;
+                padding: 10px;
             }
             .nav-card h3 {
-                font-size: 0.9rem;
+                font-size: 14px;
             }
             .product-card {
-                border-radius: 8px;
+                border-radius: 10px;
             }
             .product-image-container {
-                aspect-ratio: 1/1;
-                height: auto;
-                min-height: 100px;
+                aspect-ratio: auto;
+                height: 110px;
+                min-height: 110px;
             }
             .product-image {
-                height: 100%;
-                position: absolute;
-                top: 0; left: 0;
+                height: 110px;
+                position: relative;
             }
             .product-info {
-                padding: 0.5rem;
+                padding: 10px;
             }
             .product-title {
-                font-size: 0.8rem;
-                margin-bottom: 0.25rem;
+                font-family: 'Playfair Display', serif;
+                font-size: 13px;
+                font-weight: 600;
+                margin-bottom: 5px;
                 line-height: 1.2;
             }
             .price-container {
-                margin-bottom: 0.5rem;
-                gap: 0.25rem;
+                margin-bottom: 5px;
+                gap: 4px;
             }
             .actual-price {
-                font-size: 0.9rem;
+                font-size: 14px;
             }
             .original-price, .discount-badge {
-                font-size: 0.65rem;
+                font-size: 10px;
             }
             .card-actions {
-                gap: 0.25rem;
+                margin-top: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
             }
             .view-details {
-                font-size: 0.7rem;
-                margin-bottom: 0.25rem;
+                font-size: 11px;
+                margin-bottom: 0;
             }
             .btn {
-                padding: 0.4rem;
-                font-size: 0.75rem;
+                padding: 6px;
+                font-size: 12px;
                 border-radius: 6px;
+                width: 100%;
             }
             
             .hero h1 {
