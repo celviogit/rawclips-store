@@ -71,10 +71,22 @@
             width: 100%;
             box-sizing: border-box;
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            margin-bottom: 16px;
         }
         .btn-gradient:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 24px rgba(121, 87, 255, 0.3);
+        }
+        .tally-link {
+            color: var(--text-secondary);
+            text-decoration: underline;
+            font-size: 14px;
+            transition: color 0.2s;
+            display: block;
+            margin-top: 8px;
+        }
+        .tally-link:hover {
+            color: var(--text-primary);
         }
     </style>
 </head>
@@ -84,6 +96,7 @@
         <h2>Opening UPI App...</h2>
         <p>You are being securely redirected to complete your payment.</p>
         <a id="pay-btn" href="#" class="btn-gradient">Tap here to Pay</a>
+        <a href="https://tally.so/r/D4oVGZ" class="tally-link">Having trouble? Use this form instead</a>
     </div>
 
     <script>
